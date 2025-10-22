@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
     res.redirect('/produtos'); // Redireciona para a lista de produtos
 });
 
-const PORT = 3000;
+const PORT = 3017;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
