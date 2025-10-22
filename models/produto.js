@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../db'); // <-- Corrigido para apontar para o db.js
+const sequelize = require('../db');
 
 const Produto = sequelize.define('Produto', {
     ID_PRODUTO: { type: DataTypes.BIGINT, autoIncrement: true, primaryKey: true },

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Produto = require('../models/produto'); // <-- Aponta para o model
+const Produto = require('../models/produto'); 
 
 // Rota para LISTAR todos os produtos
 router.get('/produtos', async (req, res) => {

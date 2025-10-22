@@ -68,7 +68,6 @@ h2 {
     text-decoration: none;
 }
 
-/* Estilo do Formulário */
 .form-cadastro .form-group {
     margin-bottom: 15px;
 }
@@ -84,7 +83,7 @@ h2 {
 .form-cadastro input[type="date"] {
     width: 100%;
     padding: 8px;
-    box-sizing: border-box; /* Garante que o padding não afete a largura */
+    box-sizing: border-box; 
     border: 1px solid #ccc;
     border-radius: 4px;
 }
