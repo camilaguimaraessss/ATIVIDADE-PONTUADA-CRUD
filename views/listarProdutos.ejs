@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Final SESI</title>
+    <link rel="stylesheet" href="/css/style.css"> </head>
+<body>
+    <header class="main-header">
+        <h1>Projeto Final SESI</h1>
+    </header>
+    <main class="container">
+
+        <h2>Produtos</h2>
+
+        <a href="/produtos/novo" class="btn-novo">Novo</a>
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th>Editar</th>
+                    <th>Deletar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% produtos.forEach(produto => { %>
+                    <tr>
+                        <td><%= produto.ID_PRODUTO %></td>
+                        <td><%= produto.DESCRICAO %></td>
+                        <td><%= produto.QUANTIDADE %></td>
+                        <td><%= produto.VALOR %></td> <td>
+                            <% if (produto.DATA_PRODUTO) { %>
+                                <%= new Date(produto.DATA_PRODUTO).toLocaleDateString('pt-BR') %>
+                            <% } else { %>
+                                -
+                            <% } %>
+                        </td>
+                        <td><a href="/produtos/editar/<%= produto.ID_PRODUTO %>">Editar</a></td>
+                        <td><a href="/produtos/deletar/<%= produto.ID_PRODUTO %>">Deletar</a></td>
+                    </tr>
+                <% }); %>
+
+                <% if (produtos.length === 0) { %>
+                    <tr>
+                        <td colspan="7">Nenhum produto cadastrado.</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+    </main>
+</body>
+</html>
